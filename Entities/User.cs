@@ -21,6 +21,7 @@ namespace WebApi.Entities
         public string Avatar { get; set; }
         public bool IsActivated { get; set; }
         public ICollection<UserPhoneNumber> UserPhoneNumbers { get; set; }
+        public ICollection<Employee> Employees { get; set; }
 
     }
 }

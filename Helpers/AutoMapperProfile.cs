@@ -1,11 +1,13 @@
 using AutoMapper;
 using WebApi.Commands.Auth.Register.Models;
+using WebApi.Commands.Employees.InsertEmployee.Models;
 using WebApi.Commands.Users.ChangePassword.Models;
 using WebApi.Commands.Users.Models.PatchUpdateUser;
 using WebApi.Commands.Users.UpdateUser.Models;
 using WebApi.Entities;
 using WebApi.Models.PhoneNumbers;
 using WebApi.Models.Users;
+using WebApi.Queries.Order.GetOrderByAdmin.Models;
 using WebApi.Queries.Users.GetUserById.Models;
 using WebApi.Queries.Users.GetUsers.Models;
 
@@ -28,6 +30,14 @@ namespace WebApi.Helpers
             CreateMap<User, UsersModel>();
             CreateMap<User, PatchUpdateUserModel>();
             CreateMap<PatchUpdateUserModel, User>();
+
+            // Order
+            CreateMap<Order, OrderRepose>();
+            CreateMap<OrderRepose, Order>();
+            CreateMap<Warehouse, OrderRepose>();
+
+            // Employee
+            CreateMap<InsertEmployeeModel, Employee>();
 
         }
     }
